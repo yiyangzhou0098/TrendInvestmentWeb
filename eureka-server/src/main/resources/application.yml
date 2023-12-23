@@ -1,0 +1,13 @@
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    registerWithEureka: false # whether register to server. eureka is a server so no need to do so.
+    fetchRegistry: false # whether fetch registered information. Same as above, not necessary.
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/ # Publish URL as a server.
+      #Following microservices will register themselves to this url like http://localhost:8761/eureka/
+
+spring:
+  application:
+    name: eureka-server

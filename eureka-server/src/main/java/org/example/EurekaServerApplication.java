@@ -16,6 +16,6 @@ public class EurekaServerApplication {
             System.err.printf("Port %d is occupied", port);
             System.exit(1);
         }
-        new SpringApplicationBuilder(EurekaServerApplication.class).properties("server.port=" + port).run(args)
+        new SpringApplicationBuilder(EurekaServerApplication.class).properties("server.port=" + port).run(args);
     }
 }
